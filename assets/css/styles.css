@@ -213,7 +213,7 @@ p{margin:0}
 #euromap{width:100%;height:auto;display:block}
 #euromap .star{fill:var(--gold);pointer-events:none}
 #euromap .arc{stroke:var(--gold);stroke-width:1.1;fill:none;opacity:.26;transition:opacity .7s,stroke-width .7s}
-#euromap .arc.hot{opacity:.95;stroke-width:1.9}
+#euromap .arc.hot{opacity:1;stroke-width:2.2}
 #euromap .citydot{fill:#e9c07e}
 #euromap .citydot.hot{fill:var(--gold-bright)}
 #euromap text{font-family:var(--sans);font-size:14px;fill:var(--dim);letter-spacing:.06em}

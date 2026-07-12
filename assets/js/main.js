@@ -665,8 +665,8 @@
     svg.appendChild(gB);
 
     // traveling glow dot (one at a time, discreet)
-    var glowOuter = mk('circle', { r: 8, fill: '#f4cf8c', opacity: 0 });
-    var glowInner = mk('circle', { r: 3.2, fill: '#fff2d8', opacity: 0 });
+    var glowOuter = mk('circle', { r: 10, fill: '#f4cf8c', opacity: 0 });
+    var glowInner = mk('circle', { r: 3.6, fill: '#fff2d8', opacity: 0 });
     svg.appendChild(glowOuter);
     svg.appendChild(glowInner);
 
@@ -682,7 +682,7 @@
         p.style.transition = 'stroke-dashoffset 1.3s cubic-bezier(.22,.61,.36,1) ' + (i * 70) + 'ms, opacity .7s, stroke-width .7s';
         p.style.strokeDashoffset = '0';
       });
-      if (!reduced) setTimeout(startCycle, arcs.length * 70 + 1500);
+      if (!reduced) setTimeout(startCycle, 1000);
     }
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
@@ -698,8 +698,8 @@
       var len = path.getTotalLength();
       var t0 = null, DUR = 2000;
       path.classList.add('hot'); dot.classList.add('hot');
-      glowOuter.setAttribute('opacity', 0.28);
-      glowInner.setAttribute('opacity', 0.95);
+      glowOuter.setAttribute('opacity', 0.42);
+      glowInner.setAttribute('opacity', 1);
       function step(ts) {
         if (!t0) t0 = ts;
         var t = Math.min((ts - t0) / DUR, 1);
@@ -717,11 +717,13 @@
       raf = requestAnimationFrame(step);
     }
     function startCycle() {
-      setInterval(function () {
+      var next = function () {
         if (document.hidden) return;
         idx = (idx + 1) % arcs.length;
         flyRoute(idx);
-      }, 3200);
+      };
+      next(); // first flight immediately
+      setInterval(next, 2600);
     }
   }
 
