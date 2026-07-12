@@ -186,6 +186,42 @@ p{margin:0}
 .stage-caption h3{margin-bottom:1rem}
 .stage-caption p:last-child{color:var(--muted);font-size:1.1rem}
 
+/* ---------- listen (video teaser) ---------- */
+.listen-frame{
+  position:relative;max-width:600px;margin:3rem auto 0;
+  border-radius:22px;overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 50px 110px -45px rgba(0,0,0,.9),0 0 80px -30px rgba(232,180,99,.25);
+}
+.listen-frame video{width:100%;display:block}
+.listen-glow{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(85% 60% at 50% 108%,rgba(255,166,60,.34),transparent 70%),
+    radial-gradient(120% 120% at 50% 50%,transparent 55%,rgba(10,7,4,.55) 100%);
+  mix-blend-mode:soft-light;
+  animation:flick 3.6s ease-in-out infinite;
+}
+@keyframes flick{
+  0%,100%{opacity:.85}
+  18%{opacity:1}
+  37%{opacity:.78}
+  54%{opacity:.96}
+  71%{opacity:.82}
+  86%{opacity:.98}
+}
+.sound-btn{
+  position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(13,10,7,.72);backdrop-filter:blur(8px);
+  border:1px solid var(--gold);border-radius:999px;
+  color:var(--gold-bright);font-family:var(--sans);font-weight:500;font-size:.88rem;
+  padding:.65rem 1.3rem;cursor:pointer;white-space:nowrap;
+  transition:background .3s,transform .3s;
+}
+.sound-btn:hover{background:rgba(232,180,99,.18);transform:translateX(-50%) translateY(-2px)}
+@media(prefers-reduced-motion:reduce){.listen-glow{animation:none}}
+
 /* ---------- gallery ---------- */
 .gallery-section h2{margin-bottom:.6rem}
 .gallery{

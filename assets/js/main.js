@@ -34,6 +34,12 @@
       rep_chip_film: 'Bandas sonoras de cine',
       rep_chip_pop: 'Minimalismo contemporáneo',
 
+      lis_eyebrow: 'Escúchalo',
+      lis_title: 'Así suena la magia',
+      lis_lead: 'Unos segundos bastan para entender por qué nadie olvida una Candle Night.',
+      lis_sound_on: 'Escuchar con sonido',
+      lis_sound_off: 'Silenciar',
+
       gal_eyebrow: 'La atmósfera',
       gal_title: 'Así se siente una Candle Night',
       gal_note: 'Imágenes de actuaciones reales, tratadas artísticamente para preservar la privacidad de los asistentes.',
@@ -104,6 +110,12 @@
       rep_lead: 'The melodies everyone recognises and never tires of hearing, chosen to move you from the very first bar.',
       rep_chip_film: 'Film soundtracks',
       rep_chip_pop: 'Contemporary minimalism',
+
+      lis_eyebrow: 'Hear it',
+      lis_title: 'This is what magic sounds like',
+      lis_lead: 'A few seconds are enough to understand why no one forgets a Candle Night.',
+      lis_sound_on: 'Play with sound',
+      lis_sound_off: 'Mute',
 
       gal_eyebrow: 'The atmosphere',
       gal_title: 'This is how a Candle Night feels',
@@ -176,6 +188,12 @@
       rep_chip_film: 'Musiques de film',
       rep_chip_pop: 'Minimalisme contemporain',
 
+      lis_eyebrow: 'Écoutez',
+      lis_title: 'Voici le son de la magie',
+      lis_lead: 'Quelques secondes suffisent pour comprendre pourquoi personne n’oublie une Candle Night.',
+      lis_sound_on: 'Écouter avec le son',
+      lis_sound_off: 'Couper le son',
+
       gal_eyebrow: 'L’atmosphère',
       gal_title: 'Voici ce que l’on ressent lors d’une Candle Night',
       gal_note: 'Images de concerts réels, traitées artistiquement pour préserver la vie privée du public.',
@@ -247,6 +265,12 @@
       rep_chip_film: 'Filmmusik',
       rep_chip_pop: 'Zeitgenössischer Minimalismus',
 
+      lis_eyebrow: 'Hören Sie',
+      lis_title: 'So klingt Magie',
+      lis_lead: 'Wenige Sekunden genügen, um zu verstehen, warum niemand eine Candle Night vergisst.',
+      lis_sound_on: 'Mit Ton abspielen',
+      lis_sound_off: 'Stumm schalten',
+
       gal_eyebrow: 'Die Atmosphäre',
       gal_title: 'So fühlt sich eine Candle Night an',
       gal_note: 'Bilder echter Konzerte, künstlerisch bearbeitet, um die Privatsphäre des Publikums zu schützen.',
@@ -317,6 +341,12 @@
       rep_lead: 'Le melodie che tutti riconoscono e non si stancano mai di ascoltare, scelte per emozionare dalla prima battuta.',
       rep_chip_film: 'Colonne sonore',
       rep_chip_pop: 'Minimalismo contemporaneo',
+
+      lis_eyebrow: 'Ascolta',
+      lis_title: 'Ecco il suono della magia',
+      lis_lead: 'Bastano pochi secondi per capire perché nessuno dimentica una Candle Night.',
+      lis_sound_on: 'Ascolta con l’audio',
+      lis_sound_off: 'Silenzia',
 
       gal_eyebrow: 'L’atmosfera',
       gal_title: 'Ecco come si vive una Candle Night',
@@ -727,11 +757,38 @@
     }
   }
 
+  /* ---------------- listen teaser ---------------- */
+  function initListen() {
+    var v = document.getElementById('teaser');
+    var btn = document.getElementById('soundBtn');
+    var label = document.getElementById('soundLabel');
+    var ico = btn ? btn.querySelector('.sound-ico') : null;
+    if (!v || !btn) return;
+    btn.addEventListener('click', function () {
+      if (v.muted) {
+        v.muted = false;
+        v.currentTime = 0;
+        v.play();
+        btn.setAttribute('aria-pressed', 'true');
+        label.setAttribute('data-i18n', 'lis_sound_off');
+        label.textContent = I18N[currentLang].lis_sound_off;
+        if (ico) ico.innerHTML = '&#128263;';
+      } else {
+        v.muted = true;
+        btn.setAttribute('aria-pressed', 'false');
+        label.setAttribute('data-i18n', 'lis_sound_on');
+        label.textContent = I18N[currentLang].lis_sound_on;
+        if (ico) ico.innerHTML = '&#128266;';
+      }
+    });
+  }
+
   /* ---------------- boot ---------------- */
   function boot() {
     initLang();
     initWhatsApp();
     initPriceReveal();
+    initListen();
     initReveals();
     initTopbar();
     initScrollFX();
