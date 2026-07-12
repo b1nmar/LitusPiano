@@ -83,6 +83,23 @@
     });
   }
 
+  /* ---------------- WhatsApp: copy username (link pending exact handle) ---------------- */
+  function initWhatsApp() {
+    var wa = document.getElementById('waBtn');
+    var label = document.getElementById('waLabel');
+    if (!wa || !label) return;
+    wa.addEventListener('click', function (e) {
+      e.preventDefault();
+      var done = function () {
+        label.textContent = I18N[currentLang].book_wa_copied;
+        setTimeout(function () { label.textContent = I18N[currentLang].book_wa; }, 2600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText('En_Litos').then(done, done);
+      } else { done(); }
+    });
+  }
+
   /* ---------------- gallery lightbox ---------------- */
   function initGallery() {
     var acc = document.getElementById('galleryAcc');
@@ -423,6 +440,7 @@
   function boot() {
     initLang();
     initForm();
+    initWhatsApp();
     initGallery();
     initPriceReveal();
     initListen();
