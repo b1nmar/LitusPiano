@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0a07'/%3E%3Cellipse cx='16' cy='20' rx='4' ry='6' fill='%23f0c987'/%3E%3Cellipse cx='16' cy='14' rx='2' ry='4' fill='%23ffd27a'/%3E%3C/svg%3E" />
@@ -27,10 +27,11 @@
   <!-- top bar -->
   <header class="topbar">
     <a class="brand" href="#top">
-      <span class="brand-mark" aria-hidden="true">♪</span>
+      <span class="brand-mark" aria-hidden="true">&#9834;</span>
       <span class="brand-name">Litus Piano</span>
     </a>
     <div class="topbar-actions">
+      <a class="nav-link" href="#tarifas" data-i18n="nav_pricing">Tarifas</a>
       <a class="btn btn-ghost btn-sm" href="#reserva" data-i18n="nav_book">Reservar</a>
       <button class="lang-toggle" id="langToggle" type="button" aria-label="Language">
         <span data-lang="es">ES</span><span class="sep">/</span><span data-lang="en">EN</span>
@@ -57,7 +58,7 @@
       </div>
       <a class="scroll-cue" href="#experiencia" aria-hidden="true">
         <span data-i18n="hero_scroll">Desliza para vivirlo</span>
-        <span class="scroll-arrow">↓</span>
+        <span class="scroll-arrow">&#8595;</span>
       </a>
     </section>
 
@@ -170,8 +171,13 @@
         <div class="price-card reveal">
           <div class="price-head">
             <p class="price-plan" data-i18n="price_plan">Candle Night Piano</p>
-            <p class="price-amount"><span class="price-num">300&nbsp;€</span></p>
-            <p class="price-unit" data-i18n="price_unit">por actuación de 45 minutos</p>
+            <div class="price-reveal" id="priceReveal">
+              <button class="price-reveal-btn" id="revealPriceBtn" type="button" aria-expanded="false" data-i18n="price_reveal_btn">Descubrir la tarifa</button>
+              <div class="price-value" id="priceValue" hidden>
+                <p class="price-amount"><span class="price-num">300&nbsp;&euro;</span></p>
+                <p class="price-unit" data-i18n="price_unit">por actuación de 45 minutos</p>
+              </div>
+            </div>
           </div>
           <ul class="price-incl">
             <li data-i18n="price_incl1">Actuación de piano en directo de 45 minutos</li>
@@ -215,7 +221,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">♪</span>
+        <span class="brand-mark" aria-hidden="true">&#9834;</span>
         <span>Litus Piano · Candle Night Piano</span>
       </div>
       <div class="footer-links">

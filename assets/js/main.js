@@ -6,6 +6,8 @@
   var I18N = {
     es: {
       nav_book: 'Reservar',
+      nav_pricing: 'Tarifas',
+      price_reveal_btn: 'Descubrir la tarifa',
       hero_over: 'Litus Piano presenta',
       hero_sub: '45 minutos que no vas a olvidar. Solo un piano, cientos de velas y la música que te toca el alma.',
       hero_cta: 'Reserva tu noche mágica',
@@ -69,6 +71,8 @@
     },
     en: {
       nav_book: 'Book now',
+      nav_pricing: 'Pricing',
+      price_reveal_btn: 'Reveal the fee',
       hero_over: 'Litus Piano presents',
       hero_sub: '45 minutes you will never forget. Just a piano, hundreds of candles and the music that touches your soul.',
       hero_cta: 'Book your magical night',
@@ -197,6 +201,18 @@
     });
   }
 
+  /* ---------------- price reveal ---------------- */
+  function initPriceReveal() {
+    var btn = document.getElementById('revealPriceBtn');
+    var val = document.getElementById('priceValue');
+    if (!btn || !val) return;
+    btn.addEventListener('click', function () {
+      val.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.style.display = 'none';
+    });
+  }
+
   /* ---------------- reveal on scroll ---------------- */
   function initReveals() {
     var els = document.querySelectorAll('.reveal');
@@ -296,6 +312,7 @@
   function boot() {
     initLang();
     initWhatsApp();
+    initPriceReveal();
     initReveals();
     initTopbar();
     initScrollFX();
