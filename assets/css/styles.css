@@ -344,6 +344,18 @@ p{margin:0}
 .book-or::before,.book-or::after{content:"";height:1px;width:70px;background:var(--line)}
 @media(max-width:560px){.bf-row{grid-template-columns:1fr}}
 
+/* ---------- email reveal ---------- */
+.email-reveal{
+  background:none;border:none;cursor:pointer;
+  font-family:var(--sans);font-size:.95rem;font-weight:400;
+  color:var(--gold-bright);border-bottom:1px dashed var(--gold);
+  padding:.1rem .05rem;transition:color .3s,border-color .3s;
+}
+.email-reveal:hover{color:var(--cream);border-bottom-style:solid}
+.email-revealed{color:var(--gold-bright);border-bottom:1px solid var(--line)}
+.footer-links .email-reveal-plain{font-size:.9rem;color:var(--muted);border-bottom-color:var(--line)}
+.footer-links .email-reveal-plain:hover{color:var(--gold-bright)}
+
 /* ---------- occasions ---------- */
 .grid-occ{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:3rem}
 .occ{border:1px solid var(--line);border-radius:16px;padding:2rem 1.6rem;background:linear-gradient(180deg,rgba(232,180,99,.05),rgba(232,180,99,0));transition:transform .4s var(--ease),border-color .4s}

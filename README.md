@@ -55,6 +55,6 @@ atmósfera de la velada.
 
 ## Contacto
 
-- Email: lituspiano@gmail.com
+- Email: disponible en la web (clic para revelar)
 - WhatsApp: En_Litos
 - YouTube: [@LitusPiano](https://www.youtube.com/@LitusPiano)

@@ -56,6 +56,7 @@ window.CNP_I18N = {
     form_type: 'Tipo de evento', form_msg: 'Cuéntame tu idea',
     form_send: 'Preparar mi solicitud',
     form_hint: 'Se abrirá tu aplicación de correo con la solicitud lista para enviar.',
+    email_reveal: 'Mostrar el email',
     mail_subject: 'Reserva Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Todos los derechos reservados.'
   },
@@ -114,6 +115,7 @@ window.CNP_I18N = {
     form_type: 'Type of event', form_msg: 'Tell me your idea',
     form_send: 'Prepare my request',
     form_hint: 'Your email app will open with the request ready to send.',
+    email_reveal: 'Reveal email',
     mail_subject: 'Candle Night Piano booking',
     footer_legal: '© <span class="yr"></span> Litus Piano. All rights reserved.'
   },
@@ -172,6 +174,7 @@ window.CNP_I18N = {
     form_type: 'Type d’événement', form_msg: 'Racontez-moi votre idée',
     form_send: 'Préparer ma demande',
     form_hint: 'Votre application de messagerie s’ouvrira avec la demande prête à envoyer.',
+    email_reveal: 'Afficher l’email',
     mail_subject: 'Réservation Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Tous droits réservés.'
   },
@@ -230,6 +233,7 @@ window.CNP_I18N = {
     form_type: 'Art des Events', form_msg: 'Erzählen Sie mir Ihre Idee',
     form_send: 'Anfrage vorbereiten',
     form_hint: 'Ihre E-Mail-App öffnet sich mit der fertigen Anfrage.',
+    email_reveal: 'E-Mail anzeigen',
     mail_subject: 'Buchung Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle Rechte vorbehalten.'
   },
@@ -288,6 +292,7 @@ window.CNP_I18N = {
     form_type: 'Tipo di evento', form_msg: 'Raccontami la tua idea',
     form_send: 'Prepara la mia richiesta',
     form_hint: 'Si aprirà la tua app di posta con la richiesta pronta da inviare.',
+    email_reveal: 'Mostra l’email',
     mail_subject: 'Prenotazione Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Tutti i diritti riservati.'
   },
@@ -346,6 +351,7 @@ window.CNP_I18N = {
     form_type: 'Soort evenement', form_msg: 'Vertel me uw idee',
     form_send: 'Mijn aanvraag voorbereiden',
     form_hint: 'Uw e-mailapp opent met de aanvraag klaar om te versturen.',
+    email_reveal: 'E-mail tonen',
     mail_subject: 'Boeking Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle rechten voorbehouden.'
   },
@@ -404,6 +410,7 @@ window.CNP_I18N = {
     form_type: 'Typ av evenemang', form_msg: 'Berätta om din idé',
     form_send: 'Förbered min förfrågan',
     form_hint: 'Din e-postapp öppnas med förfrågan redo att skickas.',
+    email_reveal: 'Visa e-post',
     mail_subject: 'Bokning Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alla rättigheter förbehållna.'
   },
@@ -462,6 +469,7 @@ window.CNP_I18N = {
     form_type: 'Type arrangement', form_msg: 'Fortæl mig om din idé',
     form_send: 'Forbered min forespørgsel',
     form_hint: 'Din mail-app åbner med forespørgslen klar til at sende.',
+    email_reveal: 'Vis e-mail',
     mail_subject: 'Booking Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle rettigheder forbeholdes.'
   },
@@ -520,6 +528,7 @@ window.CNP_I18N = {
     form_type: 'Type arrangement', form_msg: 'Fortell meg om ideen din',
     form_send: 'Forbered forespørselen min',
     form_hint: 'E-postappen din åpnes med forespørselen klar til å sendes.',
+    email_reveal: 'Vis e-post',
     mail_subject: 'Booking Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle rettigheter forbeholdt.'
   },
@@ -578,6 +587,7 @@ window.CNP_I18N = {
     form_type: 'Tapahtuman tyyppi', form_msg: 'Kerro ideastasi',
     form_send: 'Valmistele pyyntöni',
     form_hint: 'Sähköpostisovelluksesi avautuu, ja pyyntö on valmis lähetettäväksi.',
+    email_reveal: 'Näytä sähköposti',
     mail_subject: 'Varaus Candle Night Piano',
     footer_legal: '© <span class="yr"></span> Litus Piano. Kaikki oikeudet pidätetään.'
   }

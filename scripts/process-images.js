@@ -23,7 +23,8 @@ const jobs = [
   { in: '11f49854-IMG_0770.jpeg', out: 'venue-hall.jpg',  w: 2000, median: 3, blur: 1.0, sat: 1.20, bri: 1.06, hue: 4 },
   // Pianist from behind (portrait). The artist himself — fine to show, still stylized.
   { in: '3bbcc164-IMG_0771.jpeg', out: 'artist-1.jpg',    w: 1300, median: 3, blur: 1.1, sat: 1.16, bri: 1.05, hue: 4 },
-  { in: '54dda22b-IMG_0774.jpeg', out: 'artist-2.jpg',    w: 1300, median: 3, blur: 1.1, sat: 1.16, bri: 1.05, hue: 4 },
+  // artist-2 was shot tilted: straighten -4deg and crop inside the rotation
+  { in: '54dda22b-IMG_0774.jpeg', out: 'artist-2.jpg',    w: 1300, median: 3, blur: 1.1, sat: 1.16, bri: 1.05, hue: 4, angle: -4, inset: 0.065, insetTop: 0.13 },
   // Audience shots — faces visible. Strong softening + colour "despiste":
   // a warm amber DUOTONE collapses every garment/hair colour into one candlelit
   // family (differentiated only by brightness), so the red jacket, hair colours
@@ -69,9 +70,18 @@ function warmSVG(w, h, k) {
     const inPath = path.join(SRC, j.in);
     const outPath = path.join(OUT, j.out);
 
-    // First pass: orient + resize + painterly softening + color grade.
-    let pipe = sharp(inPath)
-      .rotate()
+    // First pass: orient (+ optional straighten with inset crop) + resize
+    // + painterly softening + color grade.
+    let src = sharp(inPath).rotate();
+    if (j.angle) {
+      const buf = await src.rotate(j.angle, { background: '#0d0a07' }).toBuffer();
+      const m = await sharp(buf).metadata();
+      const ix = Math.round(m.width * j.inset);
+      const iyTop = Math.round(m.height * (j.insetTop || j.inset));
+      const iyBot = Math.round(m.height * j.inset);
+      src = sharp(buf).extract({ left: ix, top: iyTop, width: m.width - 2 * ix, height: m.height - iyTop - iyBot });
+    }
+    let pipe = src
       .resize({ width: j.w, withoutEnlargement: true })
       .median(j.median)
       .blur(j.blur);

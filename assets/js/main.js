@@ -4,7 +4,8 @@
   'use strict';
 
   var I18N = window.CNP_I18N || {};
-  var EMAIL = 'lituspiano@gmail.com';
+  // address assembled at runtime so it never appears verbatim in the source
+  var EMAIL = atob('bGl0dXNwaWFub0BnbWFpbC5jb20=');
   var LANGS = ['es', 'en', 'fr', 'de', 'it', 'nl', 'sv', 'da', 'no', 'fi'];
   var currentLang = 'es';
 
@@ -80,6 +81,19 @@
         '?subject=' + encodeURIComponent(dict.mail_subject) +
         '&body=' + encodeURIComponent(body);
       window.location.href = href;
+    });
+  }
+
+  /* ---------------- email: click to reveal (anti-scraper) ---------------- */
+  function initEmailReveal() {
+    document.querySelectorAll('[data-emailreveal]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var a = document.createElement('a');
+        a.href = 'mailto:' + EMAIL;
+        a.textContent = EMAIL;
+        a.className = btn.className.replace('email-reveal', 'email-revealed');
+        btn.replaceWith(a);
+      });
     });
   }
 
@@ -440,6 +454,7 @@
   function boot() {
     initLang();
     initForm();
+    initEmailReveal();
     initWhatsApp();
     initGallery();
     initPriceReveal();
