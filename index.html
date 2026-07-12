@@ -33,9 +33,18 @@
     <div class="topbar-actions">
       <a class="nav-link" href="#tarifas" data-i18n="nav_pricing">Tarifas</a>
       <a class="btn btn-ghost btn-sm" href="#reserva" data-i18n="nav_book">Reservar</a>
-      <button class="lang-toggle" id="langToggle" type="button" aria-label="Language">
-        <span data-lang="es">ES</span><span class="sep">/</span><span data-lang="en">EN</span>
-      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Language" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langCurrent">ES</span><span class="caret">&#9662;</span>
+        </button>
+        <div class="lang-list" id="langList" role="listbox" hidden>
+          <button type="button" data-setlang="es">Espa&ntilde;ol</button>
+          <button type="button" data-setlang="en">English</button>
+          <button type="button" data-setlang="fr">Fran&ccedil;ais</button>
+          <button type="button" data-setlang="de">Deutsch</button>
+          <button type="button" data-setlang="it">Italiano</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -119,12 +128,13 @@
         </p>
         <div class="chips reveal">
           <span class="chip">Chopin</span>
-          <span class="chip">Debussy</span>
           <span class="chip">Ludovico Einaudi</span>
+          <span class="chip">Max Richter</span>
+          <span class="chip">Wim Mertens</span>
           <span class="chip">Yiruma</span>
           <span class="chip">Yann Tiersen</span>
           <span class="chip" data-i18n="rep_chip_film">Bandas sonoras de cine</span>
-          <span class="chip" data-i18n="rep_chip_pop">Clásicos reinventados</span>
+          <span class="chip" data-i18n="rep_chip_pop">Minimalismo contemporáneo</span>
         </div>
       </div>
     </section>
@@ -159,6 +169,24 @@
         <div class="occ reveal"><span class="occ-ico">🏨</span><h4 data-i18n="occ_3_t">Hoteles y restaurantes</h4><p data-i18n="occ_3_b">Convierte una cena en una experiencia sensorial completa.</p></div>
         <div class="occ reveal"><span class="occ-ico">✨</span><h4 data-i18n="occ_4_t">Marcas de lujo</h4><p data-i18n="occ_4_b">Presentaciones y experiencias VIP con una banda sonora en directo.</p></div>
       </div>
+    </section>
+
+    <!-- ============ COVERAGE MAP ============ -->
+    <section class="section coverage" id="cobertura">
+      <div class="wrap narrow center">
+        <p class="eyebrow reveal" data-i18n="cov_eyebrow">Cobertura</p>
+        <h2 class="reveal" data-i18n="cov_title">De Barcelona a cualquier rincón de Europa</h2>
+        <p class="lead reveal" data-i18n="cov_lead">
+          Resido en Barcelona y viajo allí donde haya un piano esperando.
+          Cada línea en el cielo es una posible noche mágica.
+        </p>
+      </div>
+      <div class="euromap-wrap reveal">
+        <svg id="euromap" viewBox="0 0 1000 760" role="img" aria-label="Rutas desde Barcelona a las principales ciudades europeas"></svg>
+      </div>
+      <p class="cov-note wrap center reveal" data-i18n="cov_note">
+        ¿Tu ciudad no está en el mapa? Escríbeme: podría ser la siguiente.
+      </p>
     </section>
 
     <!-- ============ PRICING ============ -->

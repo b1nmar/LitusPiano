@@ -10,8 +10,11 @@ candlelit piano performance of well-known, romantic and minimalist pieces.
 
 ## Características / Features
 
-- **Bilingüe ES/EN** con detección automática del idioma del navegador y botón
-  de cambio manual (se recuerda la preferencia).
+- **5 idiomas (ES/EN/FR/DE/IT)** con detección automática del idioma del
+  navegador y selector manual (se recuerda la preferencia).
+- **Mapa de cobertura animado**: rutas estilo aerolínea desde Barcelona a las
+  principales ciudades europeas (SVG generado en cliente, respeta
+  `prefers-reduced-motion`).
 - **Scroll-driven storytelling**: el fondo cambia (cross-fade) a medida que se
   hace scroll, con parallax en la cabecera y animaciones de aparición.
 - **Diseño a la luz de las velas**: paleta cálida, tipografía serif elegante,
