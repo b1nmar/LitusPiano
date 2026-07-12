@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Candle Night Piano · Litus Piano</title>
+  <meta name="description" content="Candle Night Piano — una actuación de piano en directo a la luz de las velas. 45 minutos de piezas conocidas, románticas y minimalistas por Litus Piano. Reserva tu noche mágica." />
+  <meta name="theme-color" content="#0d0a07" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Candle Night Piano · Litus Piano" />
+  <meta property="og:description" content="45 minutos que no vas a olvidar: un piano, cientos de velas y la música que te toca el alma." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/venue-hall.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0a07'/%3E%3Cellipse cx='16' cy='20' rx='4' ry='6' fill='%23f0c987'/%3E%3Cellipse cx='16' cy='14' rx='2' ry='4' fill='%23ffd27a'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- floating light motes -->
+  <div class="embers" aria-hidden="true"></div>
+
+  <!-- top bar -->
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">♪</span>
+      <span class="brand-name">Litus Piano</span>
+    </a>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost btn-sm" href="#reserva" data-i18n="nav_book">Reservar</a>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Language">
+        <span data-lang="es">ES</span><span class="sep">/</span><span data-lang="en">EN</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" data-parallax="0.4"></div>
+      <div class="hero-veil"></div>
+      <div class="hero-inner">
+        <p class="overline reveal" data-i18n="hero_over">LITUS PIANO PRESENTA</p>
+        <h1 class="hero-title reveal" data-delay="1">Candle Night Piano</h1>
+        <p class="hero-sub reveal" data-delay="2" data-i18n="hero_sub">
+          45 minutos que no vas a olvidar. Solo un piano, cientos de velas
+          y la música que te toca el alma.
+        </p>
+        <div class="hero-cta reveal" data-delay="3">
+          <a class="btn btn-primary" href="#reserva" data-i18n="hero_cta">Reserva tu noche mágica</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#experiencia" aria-hidden="true">
+        <span data-i18n="hero_scroll">Desliza para vivirlo</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experiencia">
+      <div class="wrap narrow center">
+        <p class="eyebrow reveal" data-i18n="exp_eyebrow">La experiencia</p>
+        <h2 class="reveal" data-i18n="exp_title">Una noche a la luz de las velas que se queda contigo para siempre</h2>
+        <p class="lead reveal" data-i18n="exp_lead">
+          Apago las luces, enciendo las velas y me siento al piano. Durante 45 minutos
+          desaparece el mundo: solo quedan las melodías que todos reconocemos, envueltas
+          en una atmósfera íntima, cálida y absolutamente mágica.
+        </p>
+        <div class="pills reveal">
+          <span class="pill" data-i18n="exp_pill1">45 minutos en directo</span>
+          <span class="pill" data-i18n="exp_pill2">Piezas conocidas</span>
+          <span class="pill" data-i18n="exp_pill3">Románticas y minimalistas</span>
+          <span class="pill" data-i18n="exp_pill4">Todo interpretado por mí</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCROLL STAGE (background changes on scroll) ============ -->
+    <section class="stage" id="stage">
+      <div class="stage-viewport">
+        <div class="stage-layer" data-layer="0" style="background-image:url('assets/img/venue-hall.jpg')"></div>
+        <div class="stage-layer" data-layer="1" style="background-image:url('assets/img/artist-2.jpg')"></div>
+        <div class="stage-layer" data-layer="2" style="background-image:url('assets/img/audience-2.jpg')"></div>
+        <div class="stage-veil"></div>
+        <div class="stage-captions">
+          <div class="stage-caption" data-cap="0">
+            <p class="stage-num">01</p>
+            <h3 data-i18n="stage_1_t">Un espacio solo iluminado por velas</h3>
+            <p data-i18n="stage_1_b">Cientos de llamas, un piano y el silencio expectante antes de la primera nota.</p>
+          </div>
+          <div class="stage-caption" data-cap="1">
+            <p class="stage-num">02</p>
+            <h3 data-i18n="stage_2_t">Solo el piano y tú</h3>
+            <p data-i18n="stage_2_b">Sin bandas, sin artificios. Yo, en directo, tejiendo cada melodía nota a nota.</p>
+          </div>
+          <div class="stage-caption" data-cap="2">
+            <p class="stage-num">03</p>
+            <h3 data-i18n="stage_3_t">Una sala suspendida en la música</h3>
+            <p data-i18n="stage_3_b">El público contiene la respiración. Un momento que nadie olvida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REPERTOIRE ============ -->
+    <section class="section repertoire" id="repertorio">
+      <div class="wrap narrow center">
+        <p class="eyebrow reveal" data-i18n="rep_eyebrow">El repertorio</p>
+        <h2 class="reveal" data-i18n="rep_title">Del romanticismo clásico al minimalismo más íntimo</h2>
+        <p class="lead reveal" data-i18n="rep_lead">
+          Las melodías que todo el mundo reconoce y nadie se cansa de escuchar,
+          elegidas para emocionar desde el primer compás.
+        </p>
+        <div class="chips reveal">
+          <span class="chip">Chopin</span>
+          <span class="chip">Debussy</span>
+          <span class="chip">Ludovico Einaudi</span>
+          <span class="chip">Yiruma</span>
+          <span class="chip">Yann Tiersen</span>
+          <span class="chip" data-i18n="rep_chip_film">Bandas sonoras de cine</span>
+          <span class="chip" data-i18n="rep_chip_pop">Clásicos reinventados</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery-section" id="galeria">
+      <div class="wrap center">
+        <p class="eyebrow reveal" data-i18n="gal_eyebrow">La atmósfera</p>
+        <h2 class="reveal" data-i18n="gal_title">Así se siente una Candle Night</h2>
+      </div>
+      <div class="gallery">
+        <figure class="gal-item reveal wide"><img src="assets/img/venue-hall.jpg" alt="" loading="lazy" /></figure>
+        <figure class="gal-item reveal"><img src="assets/img/artist-1.jpg" alt="" loading="lazy" /></figure>
+        <figure class="gal-item reveal"><img src="assets/img/artist-2.jpg" alt="" loading="lazy" /></figure>
+        <figure class="gal-item reveal"><img src="assets/img/audience-1.jpg" alt="" loading="lazy" /></figure>
+        <figure class="gal-item reveal wide"><img src="assets/img/audience-2.jpg" alt="" loading="lazy" /></figure>
+      </div>
+      <p class="gallery-note wrap center reveal" data-i18n="gal_note">
+        Imágenes de actuaciones reales, tratadas artísticamente para preservar la privacidad de los asistentes.
+      </p>
+    </section>
+
+    <!-- ============ OCCASIONS ============ -->
+    <section class="section occasions" id="ocasiones">
+      <div class="wrap narrow center">
+        <p class="eyebrow reveal" data-i18n="occ_eyebrow">Perfecto para</p>
+        <h2 class="reveal" data-i18n="occ_title">Convierte tu evento en algo inolvidable</h2>
+      </div>
+      <div class="wrap grid-occ">
+        <div class="occ reveal"><span class="occ-ico">💍</span><h4 data-i18n="occ_1_t">Bodas y aniversarios</h4><p data-i18n="occ_1_b">El momento romántico que vuestros invitados recordarán para siempre.</p></div>
+        <div class="occ reveal"><span class="occ-ico">🥂</span><h4 data-i18n="occ_2_t">Eventos privados y de empresa</h4><p data-i18n="occ_2_b">Una experiencia sofisticada que eleva cualquier velada corporativa.</p></div>
+        <div class="occ reveal"><span class="occ-ico">🏨</span><h4 data-i18n="occ_3_t">Hoteles y restaurantes</h4><p data-i18n="occ_3_b">Convierte una cena en una experiencia sensorial completa.</p></div>
+        <div class="occ reveal"><span class="occ-ico">✨</span><h4 data-i18n="occ_4_t">Marcas de lujo</h4><p data-i18n="occ_4_b">Presentaciones y experiencias VIP con una banda sonora en directo.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section pricing" id="tarifas">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow reveal" data-i18n="price_eyebrow">Tarifa</p>
+          <h2 class="reveal" data-i18n="price_title">Una experiencia irrepetible, a un precio que sorprende</h2>
+        </div>
+        <div class="price-card reveal">
+          <div class="price-head">
+            <p class="price-plan" data-i18n="price_plan">Candle Night Piano</p>
+            <p class="price-amount"><span class="price-num">300&nbsp;€</span></p>
+            <p class="price-unit" data-i18n="price_unit">por actuación de 45 minutos</p>
+          </div>
+          <ul class="price-incl">
+            <li data-i18n="price_incl1">Actuación de piano en directo de 45 minutos</li>
+            <li data-i18n="price_incl2">Repertorio a medida: piezas conocidas, románticas y minimalistas</li>
+            <li data-i18n="price_incl3">Interpretado íntegramente por mí, en persona</li>
+          </ul>
+          <div class="price-note">
+            <p class="price-note-title" data-i18n="price_note_title">La tarifa NO incluye:</p>
+            <p data-i18n="price_note_body">
+              Impuestos, desplazamientos, alojamiento ni los medios necesarios para el concierto
+              (piano, velas, sala o escenario, sonido e iluminación), que corren a cargo del cliente.
+            </p>
+          </div>
+          <a class="btn btn-primary btn-block" href="#reserva" data-i18n="price_cta">Quiero reservar mi noche</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section booking" id="reserva">
+      <div class="booking-bg" aria-hidden="true"></div>
+      <div class="booking-veil"></div>
+      <div class="wrap narrow center booking-inner">
+        <p class="eyebrow reveal" data-i18n="book_eyebrow">Reserva</p>
+        <h2 class="reveal" data-i18n="book_title">Regala una noche que nadie olvidará</h2>
+        <p class="lead reveal" data-i18n="book_lead">
+          Cuéntame la fecha, la ciudad y el tipo de evento. Te respondo personalmente
+          con todos los detalles para hacerlo realidad.
+        </p>
+        <div class="book-actions reveal">
+          <a class="btn btn-primary" id="mailBtn" href="#" data-i18n="book_email">Escríbeme por email</a>
+          <a class="btn btn-ghost" id="waBtn" href="#" data-i18n="book_wa">WhatsApp: En_Litos</a>
+        </div>
+        <p class="book-mail reveal">
+          <a href="mailto:lituspiano@gmail.com">lituspiano@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">♪</span>
+        <span>Litus Piano · Candle Night Piano</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/@LitusPiano" target="_blank" rel="noopener">YouTube @LitusPiano</a>
+        <a href="mailto:lituspiano@gmail.com">lituspiano@gmail.com</a>
+      </div>
+      <p class="footer-legal" data-i18n="footer_legal">© <span id="year"></span> Litus Piano. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
