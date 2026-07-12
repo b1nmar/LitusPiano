@@ -31,6 +31,7 @@
       <span class="brand-name">Litus Piano</span>
     </a>
     <div class="topbar-actions">
+      <a class="nav-link" href="#cobertura" data-i18n="nav_map">Destinos</a>
       <a class="nav-link" href="#tarifas" data-i18n="nav_pricing">Tarifas</a>
       <a class="btn btn-ghost btn-sm" href="#reserva" data-i18n="nav_book">Reservar</a>
       <div class="lang-menu" id="langMenu">
@@ -43,6 +44,11 @@
           <button type="button" data-setlang="fr">Fran&ccedil;ais</button>
           <button type="button" data-setlang="de">Deutsch</button>
           <button type="button" data-setlang="it">Italiano</button>
+          <button type="button" data-setlang="nl">Nederlands</button>
+          <button type="button" data-setlang="sv">Svenska</button>
+          <button type="button" data-setlang="da">Dansk</button>
+          <button type="button" data-setlang="no">Norsk</button>
+          <button type="button" data-setlang="fi">Suomi</button>
         </div>
       </div>
     </div>
@@ -165,17 +171,38 @@
         <p class="eyebrow reveal" data-i18n="gal_eyebrow">La atmósfera</p>
         <h2 class="reveal" data-i18n="gal_title">Así se siente una Candle Night</h2>
       </div>
-      <div class="gallery">
-        <figure class="gal-item reveal wide"><img src="assets/img/venue-hall.jpg" alt="" loading="lazy" /></figure>
-        <figure class="gal-item reveal"><img src="assets/img/artist-1.jpg" alt="" loading="lazy" /></figure>
-        <figure class="gal-item reveal"><img src="assets/img/artist-2.jpg" alt="" loading="lazy" /></figure>
-        <figure class="gal-item reveal"><img src="assets/img/audience-1.jpg" alt="" loading="lazy" /></figure>
-        <figure class="gal-item reveal wide"><img src="assets/img/audience-2.jpg" alt="" loading="lazy" /></figure>
+      <div class="gallery-acc reveal" id="galleryAcc">
+        <figure class="gpanel" data-src="assets/img/venue-hall.jpg" style="background-image:url('assets/img/venue-hall.jpg')" tabindex="0" role="button">
+          <figcaption data-i18n="gal_cap1">La sala, minutos antes</figcaption>
+        </figure>
+        <figure class="gpanel" data-src="assets/img/artist-1.jpg" style="background-image:url('assets/img/artist-1.jpg')" tabindex="0" role="button">
+          <figcaption data-i18n="gal_cap2">Las primeras notas</figcaption>
+        </figure>
+        <figure class="gpanel" data-src="assets/img/artist-2.jpg" style="background-image:url('assets/img/artist-2.jpg')" tabindex="0" role="button">
+          <figcaption data-i18n="gal_cap3">Entre velas</figcaption>
+        </figure>
+        <figure class="gpanel" data-src="assets/img/audience-1.jpg" style="background-image:url('assets/img/audience-1.jpg')" tabindex="0" role="button">
+          <figcaption data-i18n="gal_cap4">El público, suspendido</figcaption>
+        </figure>
+        <figure class="gpanel" data-src="assets/img/audience-2.jpg" style="background-image:url('assets/img/audience-2.jpg')" tabindex="0" role="button">
+          <figcaption data-i18n="gal_cap5">Una noche que no se olvida</figcaption>
+        </figure>
       </div>
       <p class="gallery-note wrap center reveal" data-i18n="gal_note">
         Imágenes de actuaciones reales, tratadas artísticamente para preservar la privacidad de los asistentes.
       </p>
     </section>
+
+    <!-- lightbox -->
+    <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog">
+      <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar">&times;</button>
+      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior">&#8249;</button>
+      <figure class="lb-fig">
+        <img id="lbImg" src="" alt="" />
+        <figcaption id="lbCap"></figcaption>
+      </figure>
+      <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente">&#8250;</button>
+    </div>
 
     <!-- ============ OCCASIONS ============ -->
     <section class="section occasions" id="ocasiones">
@@ -207,6 +234,29 @@
       <p class="cov-note wrap center reveal" data-i18n="cov_note">
         ¿Tu ciudad no está en el mapa? Escríbeme: podría ser la siguiente.
       </p>
+    </section>
+
+    <!-- ============ ARTIST ============ -->
+    <section class="section artist" id="artista">
+      <div class="wrap artist-grid">
+        <figure class="artist-photo reveal">
+          <img src="assets/img/artist-portrait.jpg" alt="Litus, junto al piano" loading="lazy" />
+        </figure>
+        <div class="artist-text">
+          <p class="eyebrow reveal" data-i18n="art_eyebrow">El artista</p>
+          <h2 class="reveal" data-i18n="art_title">El hombre detrás de las velas</h2>
+          <p class="lead reveal" data-i18n="art_p1">
+            Soy Litus. Pianista, barcelonés y coleccionista de silencios: ese que se hace
+            en una sala justo antes de la primera nota.
+          </p>
+          <p class="artist-p reveal" data-i18n="art_p2">
+            El piano me acompaña desde siempre. Estudio cada día —comparto mis sesiones
+            abiertamente en YouTube— y cuando cae la noche, enciendo las velas: Candle Night
+            Piano es mi manera de convertir 45 minutos en un recuerdo para toda la vida.
+          </p>
+          <p class="reveal"><a class="btn btn-ghost" href="https://www.youtube.com/@LitusPiano" target="_blank" rel="noopener" data-i18n="art_yt">Mírame estudiar en YouTube</a></p>
+        </div>
+      </div>
     </section>
 
     <!-- ============ PRICING ============ -->
@@ -255,10 +305,25 @@
           Cuéntame la fecha, la ciudad y el tipo de evento. Te respondo personalmente
           con todos los detalles para hacerlo realidad.
         </p>
-        <div class="book-actions reveal">
-          <a class="btn btn-primary" id="mailBtn" href="#" data-i18n="book_email">Escríbeme por email</a>
-          <a class="btn btn-ghost" id="waBtn" href="#" data-i18n="book_wa">WhatsApp: En_Litos</a>
-        </div>
+        <form class="book-form reveal" id="bookForm" novalidate>
+          <div class="bf-row">
+            <label><span data-i18n="form_name">Tu nombre</span><input type="text" name="name" autocomplete="name" required /></label>
+            <label><span data-i18n="form_date">Fecha del evento</span><input type="date" name="date" /></label>
+          </div>
+          <div class="bf-row">
+            <label><span data-i18n="form_city">Ciudad</span><input type="text" name="city" required /></label>
+            <label><span data-i18n="form_type">Tipo de evento</span><input type="text" name="type" /></label>
+          </div>
+          <label><span data-i18n="form_msg">Cuéntame tu idea</span><textarea name="msg" rows="4"></textarea></label>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form_send">Preparar mi solicitud</button>
+          <p class="form-hint" data-i18n="form_hint">Se abrirá tu aplicación de correo con la solicitud lista para enviar.</p>
+        </form>
+        <p class="book-or reveal"><span data-i18n="book_or">o si lo prefieres</span></p>
+        <p class="reveal">
+          <a class="btn btn-ghost" id="waBtn" href="https://wa.me/en_litos" target="_blank" rel="noopener">
+            <span aria-hidden="true">&#128172;</span> <span data-i18n="book_wa">Abrir WhatsApp (En_Litos)</span>
+          </a>
+        </p>
         <p class="book-mail reveal">
           <a href="mailto:lituspiano@gmail.com">lituspiano@gmail.com</a>
         </p>
@@ -280,6 +345,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
