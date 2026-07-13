@@ -27,7 +27,7 @@ con criterio propio.
 - Repo público `b1nmar/LitusPiano`, rama de trabajo original
   `claude/candle-night-piano-site-f9ux06` (histórica; el trabajo real va a `main`).
 - **El proxy de git bloquea push de tags (403)** → usamos **ramas de versión**
-  como puntos de rollback: `release/v1.0.0` … `release/v1.5.0`.
+  como puntos de rollback: `release/v1.0.0` … `release/v1.5.1`.
   Rollback = `git checkout -B main release/vX.Y.Z && git push origin main`
   (con permiso del usuario). Crear una `release/vX.Y.Z` nueva tras cada entrega
   y seguir versionando igual.
@@ -109,3 +109,5 @@ la web de GitHub: procesarlas y hacer `git rm` del original en el mismo push.
   en El artista (primer plano candelizado con bokeh delante, piano detrás,
   abanico al hover) + extintor fuera de artist-1 + originales de público
   eliminados del repo (privacidad)
+- v1.5.1 dúo del artista animado: diagonal sin apenas solape, flotación suave
+  y turnos de primer plano cada 5 s (tap/clic también intercambia)

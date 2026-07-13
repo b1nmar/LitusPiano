@@ -263,6 +263,28 @@
     update();
   }
 
+  /* ---------------- artist double portrait ---------------- */
+  function initArtistPhotos() {
+    var box = document.querySelector('.artist-photos');
+    if (!box) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timer = null;
+
+    function swap() { box.classList.toggle('swap'); }
+    function start() { if (!timer && !reduce) timer = setInterval(swap, 5000); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    // tap/click always swaps (also with reduced motion) and restarts the cycle
+    box.addEventListener('click', function () { swap(); stop(); start(); });
+
+    // only cycle while the section is on screen
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.isIntersecting ? start() : stop(); });
+      }, { threshold: 0.25 }).observe(box);
+    } else { start(); }
+  }
+
   /* ---------------- floating embers ---------------- */
   function initEmbers() {
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -462,6 +484,7 @@
     initReveals();
     initTopbar();
     initScrollFX();
+    initArtistPhotos();
     initEmbers();
     initEuroMap();
   }
