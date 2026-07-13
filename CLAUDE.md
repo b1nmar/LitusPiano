@@ -27,7 +27,7 @@ con criterio propio.
 - Repo público `b1nmar/LitusPiano`, rama de trabajo original
   `claude/candle-night-piano-site-f9ux06` (histórica; el trabajo real va a `main`).
 - **El proxy de git bloquea push de tags (403)** → usamos **ramas de versión**
-  como puntos de rollback: `release/v1.0.0` … `release/v1.4.0`.
+  como puntos de rollback: `release/v1.0.0` … `release/v1.5.0`.
   Rollback = `git checkout -B main release/vX.Y.Z && git push origin main`
   (con permiso del usuario). Crear una `release/vX.Y.Z` nueva tras cada entrega
   y seguir versionando igual.
@@ -48,15 +48,21 @@ con criterio propio.
 - `assets/img/` — imágenes YA procesadas (las que sirve la web).
 - `assets/video/candle-teaser.mp4|candle-poster.jpg` — teaser 7,5 s "candelizado".
 - `scripts/` — herramientas Node (sharp instalado en node_modules):
-  `process-images.js` (galería), `process-artist.js` (retrato),
+  `process-images.js` (galería v1), `process-new.js` (lote v1.5: sala con velas,
+  duotonos, retrato "candelizado" con bokeh), `process-artist.js` (retrato),
   `gen-fonts.js`, `build-artifact.js`, `shoot.js` (screenshots Playwright).
 
 ## ⚠️ Originales de fotos/vídeo
 
 Los originales estaban en `/root/.claude/uploads/<session>/` — **desaparecen al
-cerrar la sesión**. En el repo solo queda `IMG_0777.jpeg` (retrato) y las
-imágenes procesadas. Para reprocesar galería o vídeo habrá que pedir al usuario
-que vuelva a subir los originales. Los scripts apuntan a la ruta de uploads vieja.
+cerrar la sesión**. En la raíz del repo quedan como fuente reprocesable:
+`IMG_0777.jpeg` (retrato piano), `IMG_0772.jpeg` (sala vacía con velas) y
+`IMG_5090.jpeg` (primer plano Litus) — sin personas ajenas, pueden servirse.
+**Los originales con público (IMG_0775/0776) se borraron del repo tras
+procesarlos**: el workflow despliega TODO el repo, y un original sin tratar
+quedaría público (pasó y se corrigió en v1.5.0; siguen en el historial git —
+purgarlo requeriría reescribir main). Si el usuario sube fotos de público por
+la web de GitHub: procesarlas y hacer `git rm` del original en el mismo push.
 
 ## Reglas de contenido
 
@@ -98,3 +104,8 @@ que vuelva a subir los originales. Los scripts apuntan a la ruta de uploads viej
 - v1.3.0 artista + galería acordeón + formulario + 10 idiomas
 - v1.3.1 "Conciertos" + WA copiar · v1.4.0 email protegido + fotos enderezadas
   (retrato sin extintor + spotlight; artist-2 recta sin cartel)
+- v1.5.0 galería renovada con 3 fotos nuevas (sala con velas, concierto en
+  directo, público lleno; fuera "Entre velas" por repetitiva) + doble retrato
+  en El artista (primer plano candelizado con bokeh delante, piano detrás,
+  abanico al hover) + extintor fuera de artist-1 + originales de público
+  eliminados del repo (privacidad)

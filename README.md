@@ -21,7 +21,8 @@ candlelit piano performance by Litus (Barcelona), touring all over Europe.
   con navegación por teclado y carrusel con snap en móvil.
 - **"Conciertos"**: mapa animado estilo aerolínea (SVG generado en cliente) con
   rutas desde Barcelona a 20 ciudades europeas; respeta `prefers-reduced-motion`.
-- **"El artista"**: retrato retocado y biografía.
+- **"El artista"**: doble retrato (primer plano a la luz de las velas +
+  escena junto al piano) y biografía.
 - **Tarifa oculta** (300 €) tras un botón "Descubrir la tarifa", con
   exclusiones claras (impuestos, desplazamientos, alojamiento, material).
 - **Reserva**: formulario multiidioma que abre el correo del visitante con la
