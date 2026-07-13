@@ -42,10 +42,13 @@ con criterio propio.
 - `assets/js/main.js` — i18n + selector idiomas, parallax hero, escena
   scroll-driven (3 fondos), galería acordeón + lightbox, mapa de rutas SVG
   animado (Barcelona→20 ciudades), precio "clic para revelar", email "clic para
-  revelar", formulario mailto, vídeo teaser, brasas flotantes.
+  revelar", formulario mailto, vídeo teaser, brasas flotantes, dúo del
+  artista animado (initArtistPhotos: turnos de primer plano + tap).
 - `assets/css/styles.css` — sistema visual: fondo #0d0a07, dorado #e8b463,
   Fraunces (display) + Hanken Grotesk (texto) vía Google Fonts.
-- `assets/img/` — imágenes YA procesadas (las que sirve la web).
+- `assets/img/` — imágenes YA procesadas (las que sirve la web). Ojo:
+  `venue-hall/artist-2/audience-2` siguen usándose como fondos de la escena
+  scroll aunque ya no estén en la galería; `audience-1` ya no se usa.
 - `assets/video/candle-teaser.mp4|candle-poster.jpg` — teaser 7,5 s "candelizado".
 - `scripts/` — herramientas Node (sharp instalado en node_modules):
   `process-images.js` (galería v1), `process-new.js` (lote v1.5: sala con velas,
