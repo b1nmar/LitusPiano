@@ -468,6 +468,35 @@ p{margin:0}
 .footer-links a:hover{color:var(--gold-bright)}
 .footer-legal{color:var(--dim);font-size:.8rem}
 
+/* ---------- mobile follow bar (only on small screens) ---------- */
+.follow-bar{display:none}
+@media(max-width:760px){
+  .follow-bar{
+    display:flex;align-items:center;gap:.55rem;
+    position:fixed;left:.6rem;right:.6rem;bottom:.6rem;z-index:120;
+    padding:.6rem .55rem .6rem .9rem;border-radius:16px;
+    background:rgba(20,16,10,.94);border:1px solid var(--line);
+    box-shadow:0 12px 36px -12px rgba(0,0,0,.85);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    transform:translateY(180%);opacity:0;pointer-events:none;
+    transition:transform .55s var(--ease),opacity .55s var(--ease);
+  }
+  .follow-bar.show{transform:none;opacity:1;pointer-events:auto}
+  .follow-bar.dismissed{display:none}
+}
+.follow-cta{font-size:.82rem;font-weight:600;color:var(--cream);flex:none}
+.follow-links{display:flex;gap:.4rem;margin-left:auto}
+.follow-btn{display:inline-flex;align-items:center;gap:.28rem;padding:.42rem .62rem;border-radius:999px;font-size:.78rem;font-weight:700;text-decoration:none;line-height:1;white-space:nowrap}
+.follow-btn svg{width:15px;height:15px;display:block;flex:none}
+.follow-btn.yt{background:#ff0033;color:#fff}
+.follow-btn.tt{background:var(--cream);color:#111}
+.follow-close{flex:none;width:26px;height:26px;border-radius:50%;background:transparent;border:0;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;padding:0}
+.follow-close:hover{color:var(--gold-bright)}
+@media(max-width:380px){
+  .follow-cta{display:none}
+  .follow-btn{padding:.46rem .7rem}
+}
+
 /* ---------- floating embers ---------- */
 .embers{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
 .ember{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:0;filter:blur(.5px);box-shadow:0 0 8px 2px rgba(240,201,135,.5);animation:rise linear infinite}

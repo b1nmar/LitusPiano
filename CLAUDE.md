@@ -114,3 +114,6 @@ la web de GitHub: procesarlas y hacer `git rm` del original en el mismo push.
   eliminados del repo (privacidad)
 - v1.5.1 dúo del artista animado: diagonal sin apenas solape, flotación suave
   y turnos de primer plano cada 5 s (tap/clic también intercambia)
+- v1.6.0 barra "Sígueme" SOLO móvil (≤760px, descartable con localStorage
+  `cnp_follow`, aparece tras scroll): YouTube @LitusPiano + TikTok
+  @litus_piano (https://www.tiktok.com/@litus_piano). TikTok también en footer.

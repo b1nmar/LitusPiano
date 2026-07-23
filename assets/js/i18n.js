@@ -58,6 +58,7 @@ window.CNP_I18N = {
     form_hint: 'Se abrirá tu aplicación de correo con la solicitud lista para enviar.',
     email_reveal: 'Mostrar el email',
     mail_subject: 'Reserva Candle Night Piano',
+    follow_cta: 'Sígueme en',
     footer_legal: '© <span class="yr"></span> Litus Piano. Todos los derechos reservados.'
   },
 
@@ -117,6 +118,7 @@ window.CNP_I18N = {
     form_hint: 'Your email app will open with the request ready to send.',
     email_reveal: 'Reveal email',
     mail_subject: 'Candle Night Piano booking',
+    follow_cta: 'Follow me on',
     footer_legal: '© <span class="yr"></span> Litus Piano. All rights reserved.'
   },
 
@@ -176,6 +178,7 @@ window.CNP_I18N = {
     form_hint: 'Votre application de messagerie s’ouvrira avec la demande prête à envoyer.',
     email_reveal: 'Afficher l’email',
     mail_subject: 'Réservation Candle Night Piano',
+    follow_cta: 'Suivez-moi sur',
     footer_legal: '© <span class="yr"></span> Litus Piano. Tous droits réservés.'
   },
 
@@ -235,6 +238,7 @@ window.CNP_I18N = {
     form_hint: 'Ihre E-Mail-App öffnet sich mit der fertigen Anfrage.',
     email_reveal: 'E-Mail anzeigen',
     mail_subject: 'Buchung Candle Night Piano',
+    follow_cta: 'Folge mir auf',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle Rechte vorbehalten.'
   },
 
@@ -294,6 +298,7 @@ window.CNP_I18N = {
     form_hint: 'Si aprirà la tua app di posta con la richiesta pronta da inviare.',
     email_reveal: 'Mostra l’email',
     mail_subject: 'Prenotazione Candle Night Piano',
+    follow_cta: 'Seguimi su',
     footer_legal: '© <span class="yr"></span> Litus Piano. Tutti i diritti riservati.'
   },
 
@@ -353,6 +358,7 @@ window.CNP_I18N = {
     form_hint: 'Uw e-mailapp opent met de aanvraag klaar om te versturen.',
     email_reveal: 'E-mail tonen',
     mail_subject: 'Boeking Candle Night Piano',
+    follow_cta: 'Volg mij op',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle rechten voorbehouden.'
   },
 
@@ -412,6 +418,7 @@ window.CNP_I18N = {
     form_hint: 'Din e-postapp öppnas med förfrågan redo att skickas.',
     email_reveal: 'Visa e-post',
     mail_subject: 'Bokning Candle Night Piano',
+    follow_cta: 'Följ mig på',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alla rättigheter förbehållna.'
   },
 
@@ -471,6 +478,7 @@ window.CNP_I18N = {
     form_hint: 'Din mail-app åbner med forespørgslen klar til at sende.',
     email_reveal: 'Vis e-mail',
     mail_subject: 'Booking Candle Night Piano',
+    follow_cta: 'Følg mig på',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle rettigheder forbeholdes.'
   },
 
@@ -530,6 +538,7 @@ window.CNP_I18N = {
     form_hint: 'E-postappen din åpnes med forespørselen klar til å sendes.',
     email_reveal: 'Vis e-post',
     mail_subject: 'Booking Candle Night Piano',
+    follow_cta: 'Følg meg på',
     footer_legal: '© <span class="yr"></span> Litus Piano. Alle rettigheter forbeholdt.'
   },
 
@@ -589,6 +598,7 @@ window.CNP_I18N = {
     form_hint: 'Sähköpostisovelluksesi avautuu, ja pyyntö on valmis lähetettäväksi.',
     email_reveal: 'Näytä sähköposti',
     mail_subject: 'Varaus Candle Night Piano',
+    follow_cta: 'Seuraa minua',
     footer_legal: '© <span class="yr"></span> Litus Piano. Kaikki oikeudet pidätetään.'
   }
 };

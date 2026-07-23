@@ -472,6 +472,36 @@
     }
   }
 
+  /* ---------------- mobile follow prompt ---------------- */
+  function initFollow() {
+    var bar = document.getElementById('followBar');
+    if (!bar) return;
+    // only on mobile viewports
+    if (!(window.matchMedia && window.matchMedia('(max-width: 760px)').matches)) return;
+    // respect a previous dismissal
+    var dismissed = false;
+    try { dismissed = localStorage.getItem('cnp_follow') === '1'; } catch (e) {}
+    if (dismissed) { bar.classList.add('dismissed'); return; }
+
+    var shown = false;
+    function show() {
+      if (shown) return; shown = true;
+      requestAnimationFrame(function () { bar.classList.add('show'); });
+      window.removeEventListener('scroll', onScroll);
+    }
+    function onScroll() {
+      if (window.scrollY > window.innerHeight * 0.5) show();
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    setTimeout(show, 4000); // fallback if the visitor doesn't scroll
+
+    document.getElementById('followClose').addEventListener('click', function () {
+      bar.classList.remove('show');
+      try { localStorage.setItem('cnp_follow', '1'); } catch (e) {}
+      setTimeout(function () { bar.classList.add('dismissed'); }, 550);
+    });
+  }
+
   /* ---------------- boot ---------------- */
   function boot() {
     initLang();
@@ -487,6 +517,7 @@
     initArtistPhotos();
     initEmbers();
     initEuroMap();
+    initFollow();
   }
 
   if (document.readyState === 'loading') {
